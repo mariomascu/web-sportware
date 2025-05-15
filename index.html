@@ -4,16 +4,17 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>SportWear - Inicio</title>
+		<link rel="shortcut icon" href="./imagenes/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/home.css" />
 	</head>
 	<body>
 		<div class="container">
-			<header>				
-					
+			<header>
 				<div class="usuario-idioma">
 					<form action="#">
 						<input type="text" placeholder="Usuario" />
-						<input type="text" placeholder="Contraseña" />
+						<input type="password" placeholder="Contraseña" />
 						<button type="submit" value="Login">Login</button>
 					</form>
 					<div class="idiomas">
@@ -22,43 +23,46 @@
 						<a href="#"><img src="./imagenes/francia.png" alt="" /></a>
 					</div>
 				</div>
-				
-				
+
 				<div class="logo">
 					<a href="./index.html"><img src="./imagenes/logo.webp" alt="logo" /></a>
 					<div class="login"></div>
 				</div>
-				
+
 				<nav class="menu">
 					<div class="menu-item"><a href="index.html">INICIO</a></div>
-					<div class="menu-item"><a href="./html/hombre.html">HOMBRE</a></div>
-					<div class="menu-item"><a href="./html/mujer.html">MUJER</a></div>
+					<div class="menu-item"><a href="./html/ropa.html">ROPA</a></div>
 					<div class="menu-item"><a href="./html/accesorios.html">ACCESORIOS</a></div>
 					<div class="menu-item"><a href="./html/contacto.html">CONTACTO</a></div>
 				</nav>
 			</header>
 			<main>
-				
 				<section>
 					<article class="zap-nike-pegasus">
-						<div class="text">
-							<h2>Nike Pegasus Trail 5</h2>
-							<p>Zapatillas de trail running</p>
-							<p>109,99 € IVA incluido</p>
-						</div>
 						<div class="media">
 							<img src="./imagenes/nike-pegasus-trail.webp" alt="Zapatillas Nike-pegasus-trail" />
 						</div>
-					</article>
-					<article class="zap-adidas">
 						<div class="text">
-							<h4>Adidas Originals</h4>
-							<h2>TREZIOD 2 - crystal white core black ftwr white</h2>
-							<p>Zapatillas de trail running</p>
-							<p>79,95 € IVA incluido</p>
+							<h4>Nike</h4>
+							<h2>Pegasus Trail 5</h2>
+							<p class="modelo">Zapatillas trail running</p>
+							<p class="precio">109,99 €</p>
+							<span>IVA incluido</span>
 						</div>
+					</article>
+					<div class="text">
+						<h2></h2>
+					</div>
+					<article class="zap-adidas">
 						<div class="media">
 							<img src="./imagenes/adidas.webp" alt="Zapatillas adidas" />
+						</div>
+						<div class="text">
+							<h4>Adidas Originals</h4>
+							<h2 class="modelo">TREZIOD 2</h2>
+							<p class="modelo">Zapatillas trail running</p>
+							<p class="precio">79,95 €</p>
+							<span>IVA incluido</span>
 						</div>
 					</article>
 				</section>
@@ -69,8 +73,6 @@
 					<div class="text-bold">
 						<p>Todo al 50%</p>
 					</div>
-					
-					
 				</aside>
 			</main>
 			<footer>
