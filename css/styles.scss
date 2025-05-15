@@ -7,152 +7,161 @@ $light-color: white;
 $font-family: "Arial", sans-serif;
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
 }
 
 body {
-	background-color: $background-color;
-	color: $text-color;
+    background-color: $background-color;
+    color: $text-color;
 }
 
 .container {
-	width: 100%;
-	margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 header {
-	background-color: $primary-color;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	gap: 1em;
-	padding-left: max(1.25rem, 50% - 37.5rem);
-	padding-right: max(1.25rem, 50% - 37.5rem);
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+    padding-top: 0.3rem;
+    padding-left: max(1.25rem, 50% - 37.5rem); //fórmula que empleo a diario en mi trabajo para calcular un padding lateral mínimo de 20px para un contenedor de 1200px
+    padding-right: max(1.25rem, 50% - 37.5rem);
+    
+    .usuario-idioma {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+
+        form {
+            align-content: center;
+            input[type="text"], button {
+                width: 9rem;
+                height: 1.5rem;
+                padding-left: 0.625rem; // 10px son 0.625rem
+                border: 0.0625rem solid #a53333; // 1px es 0.0625rem
+                border-radius: 0.5rem;
+                color: white;
+            }
+            button {
+                width: 5rem;
+                height: 1.6rem;
+                background-color: black;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .idiomas {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: 0.3125rem;
+            img {
+                width: 1.5rem;
+            }
+        }
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-right: 1.875rem;
+
+        a img {
+            width: 18.75rem;
+        }
+    }
+
+    nav {
+        padding-top: 0.9375rem;
+        padding-bottom: 0.9375rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        .menu-item {
+            float: left;
+            margin-right: 1.25rem;
+            height: 100%;
+
+            a {
+                color: $light-color;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1rem;
+                padding-top: 0.9375rem;
+                padding-bottom: 0.9375rem; 
+                padding: 0.3125rem 0.625rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: $light-color;
+                    color: $primary-color;
+                    border-radius: 0.25rem;
+                }
+            }
+        }
+    }
+
 }
 
-.header-superior {
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	justify-content: space-between;
-	.logo {
-		float: center;
-		margin-right: 30px;
-
-		a img {
-			width: 300px;
-		}
-	}
-	.usuario-idioma {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
-
-		form {
-			align-content: center;
-			input[type="text"] {
-				width: 130px;
-				height: 30px;
-				padding-left: 10px;
-				border: 1px solid #a53333;
-				border-radius: 55px;
-			}
-		}
-		.idiomas {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-content: center;
-			gap: 5px;
-			img {
-				width: 24px;
-			}
-		}
-	}
-}
-
-.menu {
-	padding-top: 15px;
-	padding-bottom: 15px;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-
-	.menu-item {
-		float: left;
-		margin-right: 20px;
-		height: 100%;
-
-		a {
-			color: $light-color;
-			text-decoration: none;
-			font-weight: bold;
-			text-transform: uppercase;
-			font-size: 16px;
-			padding-top: 15px;
-			padding-bottom: 15px;
-			padding: 5px 10px;
-			transition: all 0.3s ease;
-
-			&:hover {
-				background-color: $light-color;
-				color: $primary-color;
-				border-radius: 4px;
-			}
-		}
-	}
-}
 
 main {
-	display: flex;
-	flex-direction: row;
-	padding: 30px 20px;
-	clear: both;
-	min-height: 500px;
-	gap: 4rem;
+    display: flex;
+    flex-direction: row;
+    padding: 1.875rem 1.25rem;
+    clear: both;
+    min-height: 500px;
+    gap: 4rem;
+    margin: 0 auto;
 
-	section {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		padding-left: max(1.25rem, 50% - 37.5rem); //fórmula que empleo a diario en mi trabajo para calcular un padding lateral mínimo de 20px para un contenedor de 1200px
-		padding-right: max(1.25rem, 50% - 37.5rem); //funciona de manera responsiva
-		gap: 50px;
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: max(1.25rem, 50% - 37.5rem); //fórmula que empleo a diario en mi trabajo para calcular un padding lateral mínimo de 20px para un contenedor de 1200px
+        padding-right: max(1.25rem, 50% - 37.5rem); //funciona de manera responsiva
+        gap: 3.125rem;
 
-		article {
-			display: flex;
-			width: 100%;
+        article {
+            display: flex;
+            width: 100%;
+            height: 20rem;
+            max-width: 31.25rem;
+            padding: 1.25rem;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            background-color: white;
+            border-radius: 1.25rem;
 
-			height: 20rem;
-			max-width: 500px;
-			padding: 20px;
-			flex-direction: row;
-			align-items: center;
-			justify-content: start;
-			background-color: white;
-			border-radius: 20px;
+            text {
+                max-width: 12.5rem;
+            }
 
-			text {
-				max-width: 200px;
-			}
-
-			img {
-				max-width: 300px;
-			}
-		}
-		article:last-of-type {
-			align-self: self-end;
-		}
-	}
+            img {
+                max-width: 18.75rem;
+            }
+        }
+        article:last-of-type {
+            align-self: self-end;
+        }
+    }
 }
 
 footer {
-	background-color: $secondary-color;
-	color: $light-color;
-	text-align: center;
-	padding: 20px;
-	margin-top: 30px;
+    background-color: $secondary-color;
+    color: $light-color;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 1.875rem;
 }
