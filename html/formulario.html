@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>SportWear - Contacto</title>
+		<title>SportWear - Acerca de</title>
 		<link rel="shortcut icon" href="../imagenes/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="../css/styles.css" />
-		<link rel="stylesheet" href="../css/ropa.css" />
+		<link rel="stylesheet" href="../css/formulario.css" />
 	</head>
 	<body>
 		<div class="container">
@@ -33,10 +33,38 @@
 					<div class="menu-item"><a href="../index.html">INICIO</a></div>
 					<div class="menu-item"><a href="./ropa.html">ROPA</a></div>
 					<div class="menu-item"><a href="./accesorios.html">ACCESORIOS</a></div>
-					<div class="menu-item"><a href="./contacto.html">CONTACTO</a></div>
+					<div class="menu-item contacto">
+						<a href=".">CONTACTO</a>
+						<div class="menu-contacto">
+							<div class="sub-menu-item">
+								<a href="./formulario.html">FORMULARIO</a>
+							</div>
+							<div class="sub-menu-item">
+								<a href="./acerca-de.html">ACERCA DE</a>
+							</div>
+						</div>
+					</div>
 				</nav>
 			</header>
-			<main>Página de Accesorios</main>
+			<main>
+
+                <h1 class="cabecera">¿Tienes alguna duda sobre nuestros servicios?</h1>
+
+                <div class="formulario">
+
+                    <form action="blank">
+                        <h2>Contáctanos</h2>
+                        
+                        <input type="text" placeholder="Nombre completo" name="nombre">
+                        <input type="email" placeholder="Introduce una dirección de correo" name="email">
+                        <textarea type="text" placeholder="Introduce tu mensaje" max="300" name="mensaje"></textarea>
+                        <button type="submit" target="#">ENTREGAR</button>                        
+                    </form>
+                </div>
+
+
+
+            </main>
 			<footer>
 				<p>&copy; 2025 SportWear - Mario Mascuñano - 2º Diseño de Interfaces</p>
 			</footer>
