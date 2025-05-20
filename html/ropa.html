@@ -45,7 +45,62 @@
 					</div>
 				</nav>
 			</header>
-			<main>Página de Ropa</main>
+			<main>
+				<div class="contenedor">
+					<h2>Nueva Camiseta Adidas CANVA</h2>
+				</div>
+
+				<canvas id="camisetaCanvas" width="400" height=400"></canvas>
+
+				<script>
+					const canvas = document.getElementById('camisetaCanvas');
+					const ctx = canvas.getContext('2d');
+
+					// Creo un rectángulo horizontal para hacer las mangas
+					ctx.fillStyle = '#ff4d4d';
+					ctx.fillRect(50, 50, 300, 70);
+
+					// Creo otro rectángulo vertical para hacer el cuperpo
+					ctx.fillRect(120, 110, 160, 200);
+
+					// Círculo blanco para simular el cuello
+					ctx.beginPath();
+					ctx.arc(200, 40, 40, 0, Math.PI * 2);
+					ctx.fillStyle = 'white';
+					ctx.fill();
+
+					// Líneas oblicuas tipo Adidas
+					ctx.strokeStyle = 'black';
+					ctx.lineWidth = 10;
+
+					// Primera línea
+					ctx.beginPath();
+					ctx.moveTo(180, 180);
+					ctx.lineTo(200, 230);
+					ctx.stroke();
+
+					// Segunda línea
+					ctx.beginPath();
+					ctx.moveTo(200, 170);
+					ctx.lineTo(220, 220);
+					ctx.stroke();
+
+					// Tercera línea
+					ctx.beginPath();
+					ctx.moveTo(220, 160);
+					ctx.lineTo(240, 210);
+					ctx.stroke();
+
+					// Creo un ultimo rectángulo horizontal para hacer tapar parte de las líneas y simular el logotipo
+					ctx.fillStyle = '#ff4d4d';
+					ctx.fillRect(150, 190, 100, 70);
+
+
+				</script>
+
+
+			</main>
+
 			<footer>
 				<p>&copy; 2025 SportWear - Mario Mascuñano - 2º Diseño de Interfaces</p>
 			</footer>

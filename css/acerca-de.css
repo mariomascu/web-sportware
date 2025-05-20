@@ -5,12 +5,20 @@
   font-family: "Arial", sans-serif;
 }
 
-body {
+html, body {
+  height: 100%;
+  margin: 0;
   color: #333;
 }
-body .container {
+
+.container {
   width: 100%;
   margin: 0 auto;
+}
+
+main {
+  height: 80vh;
+  flex: 1;
 }
 
 header {
@@ -104,7 +112,7 @@ header nav .menu-item .menu-contacto {
   display: none;
   position: absolute;
   width: 150px;
-  margin-top: 0.1rem;
+  margin-top: 0.3rem;
   left: 0;
   background-color: #ff4d4d;
   color: white;
@@ -126,6 +134,7 @@ header nav .menu-item.contacto:hover .menu-contacto {
 
 footer {
   background-color: #333;
+  height: 7rem;
   color: white;
   text-align: center;
   padding: 1.25rem;
@@ -147,7 +156,6 @@ footer {
   border-radius: 1.5rem;
   display: flex;
   margin-top: 4rem;
-  margin-bottom: 4rem;
   flex-direction: row;
   width: 100%;
   gap: 3rem;

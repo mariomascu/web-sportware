@@ -1,0 +1,51 @@
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding-left: 20rem;
+  padding-right: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 2rem;
+}
+main h3 {
+  width: 40%;
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+}
+main h3 em {
+  font-weight: 500;
+}
+main h3 span {
+  text-decoration: underline;
+}
+main p {
+  width: 80%;
+  text-align: start;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: white;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 76px;
+  left: 0;
+  z-index: -100;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.4);
+}/*# sourceMappingURL=accesorios.css.map */

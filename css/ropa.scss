@@ -1,0 +1,16 @@
+@import "styles";
+
+main{
+    display: flex;
+    flex-direction: column;
+    .contenedor h2{
+        padding-top: 3rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    canvas{
+        width: 400px;
+        align-self: center;
+    }
+}
