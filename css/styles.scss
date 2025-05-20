@@ -39,6 +39,11 @@ header {
 		justify-content: flex-end;
 		gap: 2rem;
 
+		@media (width < 600px){
+			flex-direction:column-reverse;
+			gap: 0.4rem;
+		}
+
 		form {
 			align-content: center;
 			input[type="text"],

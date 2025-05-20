@@ -27,6 +27,11 @@ main {
 			border-radius: 1.25rem;
 			gap: 2rem;
 
+			@media (width < 600px){
+			flex-direction:column-reverse;
+			gap: 1rem;
+			}
+
 			.text {
 				display: flex;
 				flex-direction: column;
@@ -92,6 +97,10 @@ main {
 			p {
 				font-weight: 800;
 			}
+		}
+
+		@media (width < 600px){
+			display:none;
 		}
 	}
 }

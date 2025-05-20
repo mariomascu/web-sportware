@@ -27,6 +27,12 @@ main section article {
   border-radius: 1.25rem;
   gap: 2rem;
 }
+@media (width < 600px) {
+  main section article {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
 main section article .text {
   display: flex;
   flex-direction: column;
@@ -85,4 +91,9 @@ main aside .text-bold {
 }
 main aside .text-bold p {
   font-weight: 800;
+}
+@media (width < 600px) {
+  main aside {
+    display: none;
+  }
 }/*# sourceMappingURL=home.css.map */

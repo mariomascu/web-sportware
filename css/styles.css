@@ -30,6 +30,12 @@ header .usuario-idioma {
   justify-content: flex-end;
   gap: 2rem;
 }
+@media (width < 600px) {
+  header .usuario-idioma {
+    flex-direction: column-reverse;
+    gap: 0.4rem;
+  }
+}
 header .usuario-idioma form {
   align-content: center;
 }
