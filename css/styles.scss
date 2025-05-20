@@ -14,7 +14,7 @@ $font-family: "Arial", sans-serif;
 }
 
 body {
-	background-color: $background-color;
+	//background-color: $background-color;
 	color: $text-color;
 	.container {
 		width: 100%;
@@ -87,7 +87,6 @@ header {
 	nav {
 		padding-top: 0.9375rem;
 		padding-bottom: 0.9375rem;
-		overflow: hidden;
 		display: flex;
 		justify-content: center;
 
@@ -112,7 +111,40 @@ header {
 					border-radius: 0.25rem;
 				}
 			}
+			.menu-contacto {
+					display: none;
+					position: absolute;
+					width: 150px;
+					top: 10;
+					left: 0;
+					background-color: $primary-color;
+					color: white;
+					//overflow:visible;
+					//z-index: 10000;
+					.sub-menu-item a{
+						color: white;
+						line-height: 2rem;
+
+						&:hover{
+							width: 100%;
+							color: $primary-color;
+						}
+	
+					}
+				}
+	
+				&.contacto {
+					position: relative;
+	
+					&:hover {
+					.menu-contacto {
+						display: block; // O block, y si usas flex puedes mantener flex-direction: column
+					}
+					}
+				}
 		}
+
+		
 	}
 }
 
