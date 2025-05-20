@@ -30,6 +30,12 @@ header .usuario-idioma {
   justify-content: flex-end;
   gap: 2rem;
 }
+@media (width < 600px) {
+  header .usuario-idioma {
+    flex-direction: column-reverse;
+    gap: 0.4rem;
+  }
+}
 header .usuario-idioma form {
   align-content: center;
 }
@@ -71,36 +77,34 @@ header .logo a img {
   width: 18.75rem;
 }
 header nav {
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
   display: flex;
   justify-content: center;
 }
 header nav .menu-item {
   float: left;
   margin-right: 1.25rem;
-  height: 100%;
+  height: 2rem;
+  color: white;
+  font-weight: 700;
+  align-content: center;
 }
 header nav .menu-item a {
   color: white;
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
-  padding: 0.3125rem 0.625rem;
+  padding: 0.5rem 0.625rem;
   transition: all 0.3s ease;
 }
 header nav .menu-item a:hover {
   background-color: white;
   color: #ff4d4d;
-  border-radius: 0.25rem;
 }
 header nav .menu-item .menu-contacto {
   display: none;
   position: absolute;
   width: 150px;
-  top: 10;
+  margin-top: 0.3rem;
   left: 0;
   background-color: #ff4d4d;
   color: white;
@@ -155,7 +159,9 @@ h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
-.formulario form input[type=text], .formulario form input[type=email], .formulario form textarea {
+.formulario form input[type=text],
+.formulario form input[type=email],
+.formulario form textarea {
   width: 70%;
   border: none;
   line-height: 2rem;
@@ -167,4 +173,37 @@ h1 {
   width: 10rem;
   line-height: 2rem;
   border-radius: 0px;
+}
+
+.horario {
+  background-color: #333;
+  width: 20rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  gap: 1.5rem;
+}
+.horario img {
+  width: 24px;
+}
+.horario .blq1 .texto-superior,
+.horario .blq2 .texto-superior,
+.horario .blq3 .texto-superior {
+  color: #ff4d4d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.horario .blq1 .texto-inferior p,
+.horario .blq2 .texto-inferior p,
+.horario .blq3 .texto-inferior p {
+  font-size: 0.8rem;
+}
+.horario .blq3 .texto-superior {
+  color: white;
 }/*# sourceMappingURL=formulario.css.map */
