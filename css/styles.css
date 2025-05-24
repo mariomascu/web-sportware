@@ -84,57 +84,91 @@ header .logo {
 header .logo a img {
   width: 18.75rem;
 }
-header nav {
+header nav.menu {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-header nav .menu-item {
-  float: left;
+header nav.menu .menu-item {
   margin-right: 1.25rem;
   height: 2rem;
   color: white;
   font-weight: 700;
-  align-content: center;
+  display: flex;
+  align-items: center;
 }
-header nav .menu-item a {
+header nav.menu .menu-item a {
   color: white;
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
   padding: 0.5rem 0.625rem;
   transition: all 0.3s ease;
+  display: block;
 }
-header nav .menu-item a:hover {
+header nav.menu .menu-item a:hover {
   background-color: white;
   color: #ff4d4d;
 }
-header nav .menu-item .menu-contacto {
-  display: none;
-  position: absolute;
-  width: 150px;
-  margin-top: 0.3rem;
-  left: 0;
-  background-color: #ff4d4d;
+header nav.menu .menu-item-contacto {
+  position: relative;
+  margin-right: 1.25rem;
+  height: 2rem;
   color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.625rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  list-style: none;
 }
-header nav .menu-item .menu-contacto .sub-menu-item a {
-  color: white;
-  line-height: 2rem;
-}
-header nav .menu-item .menu-contacto .sub-menu-item a:hover {
-  width: 100%;
+header nav.menu .menu-item-contacto:hover {
+  background-color: white;
   color: #ff4d4d;
 }
-header nav .menu-item.contacto {
-  position: relative;
+header nav.menu .menu-item-contacto:hover .sub-menu {
+  display: flex;
 }
-header nav .menu-item.contacto:hover .menu-contacto {
+header nav.menu .menu-item-contacto .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  background-color: #ff4d4d;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+}
+header nav.menu .menu-item-contacto .sub-menu .sub-menu-item {
+  width: 100%;
+}
+header nav.menu .menu-item-contacto .sub-menu .sub-menu-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 0.625rem;
+  transition: all 0.3s ease;
   display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+header nav.menu .menu-item-contacto .sub-menu .sub-menu-item a:hover {
+  background-color: white;
+  color: #ff4d4d;
 }
 
 footer {
   background-color: #333;
-  height: 7rem;
+  height: 2rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   color: white;
   text-align: center;
   padding: 1.25rem;

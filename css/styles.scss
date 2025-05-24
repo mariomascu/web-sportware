@@ -1,166 +1,199 @@
-//variables
-$primary-color: #ff4d4d;
-$secondary-color: #333;
-$background-color: #f5f5f5;
-$background-card: #d9e6de;
-$text-color: #333;
-$light-color: white;
-$font-family: "Arial", sans-serif;
-
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
 
 html, body {
-	height: 100%;
-	margin: 0;
-	//background-color: $background-color;
-	color: $text-color;
-}
-.container {
-	width: 100%;
-	margin: 0 auto;
+  height: 100%;
+  margin: 0;
+  color: #333;
 }
 
-main{
-	height: 80vh;
-	flex:1;
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  height: 80vh;
+  flex: 1;
 }
 
 header {
-	background-color: $primary-color;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	gap: 1em;
-	padding-top: 0.3rem;
-	padding-left: max(1.25rem, 50% - 37.5rem); //fórmula que empleo a diario en mi trabajo para calcular un padding lateral mínimo de 20px para un contenedor de 1200px
-	padding-right: max(1.25rem, 50% - 37.5rem);
+  background-color: #ff4d4d;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+  padding-top: 0.3rem;
+  padding-left: max(1.25rem, 50% - 37.5rem);
+  padding-right: max(1.25rem, 50% - 37.5rem);
 
-	.usuario-idioma {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
-		gap: 2rem;
+  .usuario-idioma {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
 
-		@media (width < 600px) {
-			flex-direction: column-reverse;
-			gap: 0.4rem;
-		}
+    @media (width < 600px) {
+      flex-direction: column-reverse;
+      gap: 0.4rem;
+    }
 
-		form {
-			align-content: center;
-			input[type="text"],
-			input[type="password"],
-			button {
-				width: 9rem;
-				height: 1.5rem;
-				padding-left: 0.625rem; // 10px son 0.625rem
-				border: 0.0625rem solid #a53333; // 1px es 0.0625rem
-				border-radius: 0.5rem;
-				color: black;
-			}
-			button {
-				width: 5rem;
-				height: 1.6rem;
-				background-color: black;
-				color: white;
+    form {
+      align-content: center;
 
-				&:hover {
-					cursor: pointer;
-				}
-			}
-		}
-		.idiomas {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-content: center;
-			gap: 0.3125rem;
-			img {
-				width: 1.5rem;
-			}
-		}
-	}
+      input[type="text"],
+      input[type="password"],
+      button {
+        width: 9rem;
+        height: 1.5rem;
+        padding-left: 0.625rem;
+        border: 0.0625rem solid #a53333;
+        border-radius: 0.5rem;
+        color: black;
+      }
 
-	.logo {
-		display: flex;
-		justify-content: center;
-		margin-right: 1.875rem;
+      button {
+        width: 5rem;
+        height: 1.6rem;
+        background-color: black;
+        color: white;
 
-		a img {
-			width: 18.75rem;
-		}
-	}
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
 
-	nav {
-		//padding-top: 0.9375rem;
-		//padding-bottom: 0.9375rem;
-		display: flex;
-		justify-content: center;
+    .idiomas {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      gap: 0.3125rem;
 
-		.menu-item {
-			float: left;
-			margin-right: 1.25rem;
-			height: 2rem;
-			color: $light-color;
-			font-weight: 700;
-			align-content: center;
+      img {
+        width: 1.5rem;
+      }
+    }
+  }
 
-			a {
-				color: $light-color;
-				text-decoration: none;
-				font-weight: 700;
-				font-size: 1rem;
-				padding: 0.5rem 0.625rem;
-				transition: all 0.3s ease;
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-right: 1.875rem;
 
-				&:hover {
-					background-color: $light-color;
-					color: $primary-color;
-				}
-			}
-			.menu-contacto {
-				display: none;
-				position: absolute;
-				width: 150px;
-				margin-top: 0.3rem;
-				left: 0;
-				background-color: $primary-color;
-				color: white;
+    a img {
+      width: 18.75rem;
+    }
+  }
 
-				.sub-menu-item a {
-					color: white;
-					line-height: 2rem;
+  nav.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-					&:hover {
-						width: 100%;
-						color: $primary-color;
-					}
-				}
-			}
+    // Estilos para elementos normales del menú
+    .menu-item {
+      margin-right: 1.25rem;
+      height: 2rem;
+      color: white;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
 
-			&.contacto {
-				position: relative;
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 0.5rem 0.625rem;
+        transition: all 0.3s ease;
+        display: block;
 
-				&:hover {
-					.menu-contacto {
-						display: block; // O block, y si usas flex puedes mantener flex-direction: column
-					}
-				}
-			}
-		}
-	}
+        &:hover {
+          background-color: white;
+          color: #ff4d4d;
+        }
+      }
+    }
+
+    // Estilos específicos para el elemento CONTACTO con submenú
+    .menu-item-contacto {
+      position: relative;
+      margin-right: 1.25rem;
+      height: 2rem;
+      color: white;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0.625rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      list-style: none;
+
+      // Hover del elemento principal CONTACTO
+      &:hover {
+        background-color: white;
+        color: #ff4d4d;
+
+        // Mostrar el submenú cuando se hace hover sobre CONTACTO
+        .sub-menu {
+          display: flex;
+        }
+      }
+
+      // Estilos del submenú
+      .sub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 150px;
+        background-color: #ff4d4d;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+
+        .sub-menu-item {
+          width: 100%;
+
+          a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.5rem 0.625rem;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+
+            &:hover {
+              background-color: white;
+              color: #ff4d4d;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
-	background-color: $secondary-color;
-	height: 7rem;
-	color: $light-color;
-	text-align: center;
-	padding: 1.25rem;
+  background-color: #333;
+  height: 2rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  padding: 1.25rem;
 }
